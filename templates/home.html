@@ -1,0 +1,131 @@
+  
+  <!-- 
+NAME @: Sufyan Shaikh
+TOPIC @: Churn Prediction Model Deployment
+DATE @: 26/03/2023 
+-->
+
+  
+  <!-----------------------------  BASE SECTION  ----------------------------------->
+
+{% extends "base.html"%}
+
+  <!-------------------------------------------------------------------------------->
+
+{% block content %}
+
+
+  <!---------------------------  HOME BODY SECTION   ------------------------------>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="   w3-pale-yellow  w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+
+        <div class="w3-content" style="max-width:800px">
+
+            <h5 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">ABOUT THE PROJECT</span></h5>
+            
+            <h3>Churn Risk : </h3>
+
+            <br>
+
+            <p>Churn risk is the likelihood that a customer will cancel their subscription. A customer that is a high churn-risk is very likely to cancel
+            </p>
+
+            <br>
+
+            <h3>Impact of Churn Prediction :</h3>
+
+            <br>
+
+            <p>The ability to predict churn before it happens allows businesses to take proactive actions to keep existing customers from churning. 
+            </p>
+
+            <p>
+              This could look like: Customer success teams reaching out to those high-risk customers to provide support or to gauge what needs may not be being met.
+            </p>
+        
+    
+        </div>
+    </div>
+
+<br>
+<br>
+
+  <!-----------------------------  FORM SECTIOIN  ----------------------------------->
+
+    <div class="w3-content" id="form1" style="max-width:800px">
+
+    <center>
+    <h1>Please fill out the form below</h1>
+    </center>
+    <br>
+    <hr>
+
+    <form   method="POST">
+        {# This hidden_tag is a CSRF security feature. #}
+        {{ form.hidden_tag() }}
+
+        {{ form.Name.label }}{{form.Name}}
+        <hr>
+        
+        {{ form.CreditScore.label}} {{form.CreditScore}}
+        <hr>
+
+        {{form.Geography.label}} {{form.Geography}}
+        <hr>
+
+        {{form.Gender.label}} {{form.Gender}}
+        <hr>
+
+        {{form.Age.label}} {{form.Age}}
+        <hr>
+
+        {{form.Balance.label}} {{form.Balance}}
+        <hr>
+
+        {{form.NumOfProducts.label}} {{form.NumOfProducts}}
+        <hr>
+
+        {{form.HasCrCard.label}} {{form.HasCrCard}}
+        <hr>
+
+        {{form.IsActiveMember.label}} {{form.IsActiveMember}}
+        <hr>
+
+        {{form.EstimatedSalary.label}} {{form.EstimatedSalary}}
+        <hr>
+        Any other feedback?
+        <br>
+        {{form.feedback}}
+
+        <br>
+     
+        <hr>
+
+        <div class="w3-center">
+
+            {{ form.submit() }}
+
+        </div>
+
+       
+
+    </form>
+
+
+
+    </div>
+
+  <!----------------------------------------------------------------------------->
+
+
+
+
+</div>
+
+{% endblock %}
+
+  <!-----------------------------  THE END  ----------------------------------->
